@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['deallocate_1118',['deallocate',['../classcan_1_1NewArray.html#a4adf1d913e1acf93208286bb95073ede',1,'can::NewArray']]],
+  ['decomposeqr_1119',['decomposeQR',['../namespacemth.html#a4aac3f2080a6db8a88c3f2b7fb6be0f7',1,'mth']]],
+  ['deref_1120',['deref',['../classapf_1_1Mesh2.html#a034e0ff6937c44ec245e8a5bfb753d0f',1,'apf::Mesh2']]],
+  ['derive2dmdlfrommanifold_1121',['derive2DMdlFromManifold',['../namespaceapf.html#aa6361743deaa5515a0ad17f70a15424c',1,'apf']]],
+  ['derivemdlfrommanifold_1122',['deriveMdlFromManifold',['../namespaceapf.html#a80f03eb0ab471313994a3cc12910e513',1,'apf']]],
+  ['derivemdsmodel_1123',['deriveMdsModel',['../namespaceapf.html#a619beb8ada85832d9bb604a0ca7ae865',1,'apf']]],
+  ['destroy_1124',['destroy',['../classapf_1_1Mesh2.html#a099296cc533235741b6d9f507af30a66',1,'apf::Mesh2']]],
+  ['destroy_5f_1125',['destroy_',['../classapf_1_1Mesh2.html#aa023042232cfeca020689766e2e89d13',1,'apf::Mesh2']]],
+  ['destroyelement_1126',['destroyElement',['../namespaceapf.html#ac1780811d0eda93fbe8e1cb6005ae8f6',1,'apf']]],
+  ['destroyfield_1127',['destroyField',['../namespaceapf.html#a2b79d22c97ba66e7c5b483b864dd7124',1,'apf']]],
+  ['destroyglobalnumbering_1128',['destroyGlobalNumbering',['../namespaceapf.html#a5236154e521e2f4e4b31dcebea3e3c91',1,'apf']]],
+  ['destroygrstream_1129',['destroyGRStream',['../phstream_8h.html#abc812a0dc0d1577f6600daf8d70ea124',1,'phstream.h']]],
+  ['destroymesh_1130',['destroyMesh',['../namespaceapf.html#a7bda3647cf835f66149ed06cb7df16e3',1,'apf']]],
+  ['destroymeshelement_1131',['destroyMeshElement',['../namespaceapf.html#aaae2bd20b6108fe74ce8ab1442883aee',1,'apf']]],
+  ['destroynative_1132',['destroyNative',['../classapf_1_1Mesh.html#aa6a762d331fa444923fe341a2f351e0f',1,'apf::Mesh']]],
+  ['destroynumbering_1133',['destroyNumbering',['../namespaceapf.html#a14dc8db7fa93ea3b62c5a788cb05a205',1,'apf']]],
+  ['destroyrstream_1134',['destroyRStream',['../phstream_8h.html#a6ec74b029440bcabbcd36e2d9f884e21',1,'phstream.h']]],
+  ['destroytag_1135',['destroyTag',['../classapf_1_1Mesh.html#a6a9c830440328c089365f5a9fdf65450',1,'apf::Mesh']]],
+  ['destruct_1136',['destruct',['../namespaceapf.html#af40263f043f08164b5e83e672db2ad16',1,'apf']]],
+  ['determinant_1137',['determinant',['../namespacemth.html#a863c36221e6a1c49ce66afc15abacff5',1,'mth::determinant(Matrix&lt; T, 2, 2 &gt; const &amp;a)'],['../namespacemth.html#a91b97aad06d1d3dd85e2c69228b23906',1,'mth::determinant(Matrix&lt; T, 3, 3 &gt; const &amp;a)'],['../namespacemth.html#a6ca32c90218c99bb2cdc89765d9857c7',1,'mth::determinant(Tensor&lt; T &gt; const &amp;a)']]],
+  ['diff_1138',['diff',['../classmth_1_1AD.html#a856e359a87dee9f69e56b0b0d3f7430d',1,'mth::AD']]],
+  ['displacemesh_1139',['displaceMesh',['../namespaceapf.html#a8f5fee4fb7d38918b96a0f19645d9009',1,'apf']]],
+  ['dx_1140',['dx',['../classmth_1_1AD_3_01T_00_010_01_4.html#ab8eec5687fe1e336de5e89b464326849',1,'mth::AD&lt; T, 0 &gt;::dx(unsigned int i) const'],['../classmth_1_1AD_3_01T_00_010_01_4.html#a2364ae4ec4a027ca0d3be11bd698c080',1,'mth::AD&lt; T, 0 &gt;::dx(unsigned int i)'],['../classmth_1_1AD.html#aa77cc6c59610275426d69c8def42253b',1,'mth::AD::dx(unsigned int i) const'],['../classmth_1_1AD.html#aa416fd506d61808c658bb03166d6b973',1,'mth::AD::dx(unsigned int i)']]],
+  ['dynamicmatrix_1141',['DynamicMatrix',['../classapf_1_1DynamicMatrix.html#ad2fa9fcbd2c010b1254cd5ea8f767a2c',1,'apf::DynamicMatrix::DynamicMatrix(std::size_t m, std::size_t n)'],['../classapf_1_1DynamicMatrix.html#aee26e52a472c83d8804aa84027dcd99e',1,'apf::DynamicMatrix::DynamicMatrix()']]],
+  ['dynamicvector_1142',['DynamicVector',['../classapf_1_1DynamicVector.html#a3a577dd1cbe3deeed52ccbc93362cba3',1,'apf::DynamicVector::DynamicVector(std::size_t n)'],['../classapf_1_1DynamicVector.html#a1b14abce21a8393b60ca2959389576fe',1,'apf::DynamicVector::DynamicVector()']]]
+];

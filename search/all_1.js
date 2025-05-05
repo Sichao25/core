@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['b2_60',['b2',['../namespacecrv.html#a883306cb5a6bd3c14d005284bec19364',1,'crv']]],
+  ['b3_61',['b3',['../namespacecrv.html#abd45cecc4219f0adee4adc2e55d0b350',1,'crv']]],
+  ['backsubut_62',['backsubUT',['../namespacemth.html#ac1aa7f91c8556205f1678c4dc5461a12',1,'mth']]],
+  ['balance_63',['balance',['../classapf_1_1Balancer.html#a754a92e960fd2d0784ebf490b8374ebe',1,'apf::Balancer::balance()'],['../chef_8h.html#abd9c3fb116406491f7079dbb2222fba2',1,'chef::balance(ph::Input &amp;ctrl, apf::Mesh2 *m)']]],
+  ['balanceandreorder_64',['balanceAndReorder',['../chef_8h.html#acc38041cbc1755b6cae4c447e27c25d1',1,'chef']]],
+  ['balancer_65',['Balancer',['../classapf_1_1Balancer.html',1,'apf']]],
+  ['bbox_66',['bbox',['../structgmi__model__ops.html#ae9fae20d8ca0cfb1a72886a82afa57e3',1,'gmi_model_ops']]],
+  ['begin_67',['begin',['../structgmi__model__ops.html#acae9f28bc1baa3859e1e3fa1796d7de4',1,'gmi_model_ops::begin()'],['../classapf_1_1Mesh.html#a94763ac4263de262248b9b18f71ee92b',1,'apf::Mesh::begin()']]],
+  ['betadist_68',['betaDist',['../classph_1_1Input.html#a9e28f7c7f5ec4a80160d787c1c5f617a',1,'ph::Input']]],
+  ['betasize_69',['betaSize',['../classph_1_1Input.html#a9dfcd2637d39965217a53a0793455478',1,'ph::Input']]],
+  ['bezier_70',['bezier',['../namespacecrv.html#abcfc2f111672bc3a3d16161b952c4a5a',1,'crv']]],
+  ['beziercurver_71',['BezierCurver',['../classcrv_1_1BezierCurver.html',1,'crv']]],
+  ['beziergrads_72',['bezierGrads',['../namespacecrv.html#aa12d94e82b35205718cd4d3f3b4d87e7',1,'crv']]],
+  ['beziershape_73',['bezierShape',['../namespacecrv.html#a3bc760a6279cdc9b15779144e36fd70c',1,'crv']]],
+  ['beziershapegrads_74',['bezierShapeGrads',['../namespacecrv.html#a4899e132dc03c39444daccd1123a80f9',1,'crv']]],
+  ['bij_75',['Bij',['../namespacecrv.html#a32484fd7346c843e8450ab36d2bbae6f',1,'crv::Bij(const int i, const int j, const double u, const double v)'],['../namespacecrv.html#a5654ebdb0b57114e12344ad1d1b6e249',1,'crv::Bij(const int ij[], const double xi[])']]],
+  ['binomial_76',['binomial',['../namespacecrv.html#ad30dd0c236e74a47f6a4e2d73ca885f7',1,'crv']]],
+  ['blendedtrianglegetvalues_77',['BlendedTriangleGetValues',['../namespacecrv.html#a881f14e4ac5dfcf39f96338a9b122eea',1,'crv']]],
+  ['boundarytoelementxi_78',['boundaryToElementXi',['../namespaceapf.html#a7c09873de7fd7855f417e4f0cba10f2b',1,'apf']]],
+  ['boundingbox_79',['boundingBox',['../classapf_1_1Mesh.html#a06fbcd7c4a181009340ddd0242fe34ab',1,'apf::Mesh']]],
+  ['buildcallback_80',['BuildCallback',['../classapf_1_1BuildCallback.html',1,'apf']]],
+  ['buildelement_81',['buildElement',['../namespaceapf.html#ae4a6608901d851a5d760bef899ca8e4a',1,'apf']]],
+  ['buildoneelement_82',['buildOneElement',['../namespaceapf.html#aa44d7b4188599480d9ea5ae68139bb0f',1,'apf']]]
+];
