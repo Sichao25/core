@@ -28,9 +28,13 @@ jobs:
       
       - name: Generate Doc
         run: doxygen ${{github.workspace}}/build/Doxyfile
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: gh-pages
+          path: ./doc/html
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./doc/html
+        id: deployment
+        uses: actions/deploy-pages@v4
