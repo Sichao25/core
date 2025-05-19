@@ -7,6 +7,8 @@
     1. A hybrid phased message passing system
     2. Hybrid collective operations
     3. Ability to have multiple PCU objects exist with different amounts of processors
+  
+  If you see this line, the deployment works as expected.
 
   Phased message passing is similar to Bulk Synchronous Parallel.
   All messages are exchanged in a phase, which is a collective operation
