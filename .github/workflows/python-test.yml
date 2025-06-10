@@ -63,6 +63,8 @@ jobs:
           cmake ../Trilinos \
             -DCMAKE_INSTALL_PREFIX=${{ github.workspace }}/libs/install \
             -DTPL_ENABLE_MPI:BOOL=ON \
+            -DCMAKE_C_FLAGS="-O3 -fPIC" \
+            -DCMAKE_CXX_FLAGS="-O3 -fPIC" \
             -DTrilinos_ENABLE_ALL_PACKAGES:BOOL=OFF \
             -DTrilinos_ENABLE_Zoltan:BOOL=ON \
             -DZoltan_ENABLE_EXAMPLES:BOOL=OFF \
