@@ -32,14 +32,20 @@ jobs:
           ./configure --prefix=${{ github.workspace }}/libs/install
           make
           make install
-
       
-      - name: Build ParMETIS
-        run: |
-          git clone https://github.com/KarypisLab/ParMETIS.git
-          cd ParMETIS
-          make config prefix=${{ github.workspace }}/libs/install
-          make install
+      # - name: Build GKlib
+      #   run: |
+      #     git clone https://github.com/KarypisLab/GKlib.git
+      #     cd GKlib
+      #     make config prefix=${{ github.workspace }}/libs/install
+      #     make install
+      
+      # - name: Build ParMETIS
+      #   run: |
+      #     git clone https://github.com/KarypisLab/ParMETIS.git
+      #     cd ParMETIS
+      #     make config prefix=${{ github.workspace }}/libs/install
+      #     make install
 
       - name: Build Zoltan from Trilinos (minimal)
         run: |
