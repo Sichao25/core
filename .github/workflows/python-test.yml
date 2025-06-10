@@ -33,19 +33,26 @@ jobs:
           make
           make install
       
-      # - name: Build GKlib
-      #   run: |
-      #     git clone https://github.com/KarypisLab/GKlib.git
-      #     cd GKlib
-      #     make config prefix=${{ github.workspace }}/libs/install
-      #     make install
+      - name: Build GKlib
+        run: |
+          git clone https://github.com/KarypisLab/GKlib.git
+          cd GKlib
+          make config prefix=${{ github.workspace }}/libs/install
+          make install
       
-      # - name: Build ParMETIS
-      #   run: |
-      #     git clone https://github.com/KarypisLab/ParMETIS.git
-      #     cd ParMETIS
-      #     make config prefix=${{ github.workspace }}/libs/install
-      #     make install
+      - name: Build METIS
+        run: |
+          git clone https://github.com/KarypisLab/METIS.git
+          cd METIS
+          make config prefix=${{ github.workspace }}/libs/install
+          make install
+      
+      - name: Build ParMETIS
+        run: |
+          git clone https://github.com/KarypisLab/ParMETIS.git
+          cd ParMETIS
+          make config prefix=${{ github.workspace }}/libs/install
+          make install
 
       - name: Build Zoltan from Trilinos (minimal)
         run: |
@@ -59,6 +66,7 @@ jobs:
             -DTrilinos_ENABLE_Zoltan:BOOL=ON \
             -DZoltan_ENABLE_EXAMPLES:BOOL=OFF \
             -DZoltan_ENABLE_TESTS:BOOL=OFF
+            -D Zoltan_ENABLE_ParMETIS:BOOL=ON
           make
           make install
 
