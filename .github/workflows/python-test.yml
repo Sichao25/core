@@ -1,0 +1,84 @@
+name: Build and Test PUMI Python Interface
+
+on:
+  push:
+    branches: [yus/update_python_wrapper_test]
+  pull_request:
+    branches: [yus/update_python_wrapper_test]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}/core/build-py/python_wrappers
+      LD_LIBRARY_PATH: ${{ github.workspace }}/libs/install/lib:${LD_LIBRARY_PATH}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake mpich build-essential python3 python3-pip
+          pip3 install mpi4py
+      
+      - name: Build SWIG
+        run: |
+          git clone https://github.com/swig/swig.git
+          cd swig
+          ./autogen.sh
+          ./configure --prefix=${{ github.workspace }}/libs/install
+          make
+          make install
+
+      
+      - name: Build ParMETIS
+        run: |
+          git clone https://github.com/KarypisLab/ParMETIS.git
+          cd ParMETIS
+          make config prefix=${{ github.workspace }}/libs/install
+          make install
+
+      - name: Build Zoltan from Trilinos (minimal)
+        run: |
+          git clone https://github.com/trilinos/Trilinos.git
+          cd Trilinos
+          cmake \
+            -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/libs/install \
+            -DTPL_ENABLE_MPI:BOOL=ON \
+            -DTrilinos_ENABLE_ALL_PACKAGES:BOOL=OFF \
+            -DTrilinos_ENABLE_Zoltan:BOOL=ON \
+            -DZoltan_ENABLE_EXAMPLES:BOOL=OFF \
+            -DZoltan_ENABLE_TESTS:BOOL=OFF
+          make
+          make install
+
+      - name: Configure main project
+        working-directory: ${{github.workspace}}/core
+        run: |
+          cmake -S . -B build-py \
+            -DCMAKE_INSTALL_PREFIX="$PWD/build-py/install" \
+            -DCMAKE_C_COMPILER=mpicc \
+            -DCMAKE_CXX_COMPILER=mpicxx \
+            -DSCOREC_CXX_OPTIMIZE=ON \
+            -DMDS_ID_TYPE=int \
+            -DPCU_COMPRESS=ON \
+            -DENABLE_ZOLTAN=ON \
+            -DZOLTAN_ROOT=${GITHUB_WORKSPACE}/libs/install \
+            -DPUMI_PYTHON_INTERFACE=ON \
+            -DBUILD_SHARED_LIBS=ON \
+            -DBUILD_EXES=OFF \
+            -DIS_TESTING=OFF \
+            -DENABLE_OMEGA_H=OFF \
+            -DENABLE_SIMMETRIX=OFF
+
+      - name: Build and install
+        run: |
+          cmake --build build-py -j 4 --target install
+
+      - name: Run Python test
+        working-directory: ${{github.workspace}}/core/python_wrappers
+        run: |
+          python3 test_pyCore.py -g input/cube.dmg -m input/cube.smb
