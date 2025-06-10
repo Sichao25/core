@@ -56,6 +56,7 @@ jobs:
 
       - name: Build Zoltan from Trilinos (minimal)
         run: |
+          ls ${{ github.workspace }}/libs/install
           git clone https://github.com/trilinos/Trilinos.git
           mkdir build-zoltan
           cd build-zoltan
@@ -66,7 +67,9 @@ jobs:
             -DTrilinos_ENABLE_Zoltan:BOOL=ON \
             -DZoltan_ENABLE_EXAMPLES:BOOL=OFF \
             -DZoltan_ENABLE_TESTS:BOOL=OFF \
-            -DZoltan_ENABLE_ParMETIS:BOOL=ON
+            -DZoltan_ENABLE_ParMETIS:BOOL=ON \
+            -DParMETIS_INCLUDE_DIRS=${{ github.workspace }}/libs/install \
+            -DParMETIS_LIBRARY_DIRS=${{ github.workspace }}/libs/install
           make
           make install
 
