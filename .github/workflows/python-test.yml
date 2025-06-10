@@ -89,6 +89,7 @@ jobs:
             -DBUILD_EXES=OFF \
             -DIS_TESTING=OFF \
             -DENABLE_OMEGA_H=OFF \
+            -DParMETIS_DIR=${{ github.workspace }}/libs/install \
             -DENABLE_SIMMETRIX=OFF
 
       - name: Build and install
