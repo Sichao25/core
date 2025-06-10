@@ -65,8 +65,8 @@ jobs:
             -DTrilinos_ENABLE_ALL_PACKAGES:BOOL=OFF \
             -DTrilinos_ENABLE_Zoltan:BOOL=ON \
             -DZoltan_ENABLE_EXAMPLES:BOOL=OFF \
-            -DZoltan_ENABLE_TESTS:BOOL=OFF
-            -D Zoltan_ENABLE_ParMETIS:BOOL=ON
+            -DZoltan_ENABLE_TESTS:BOOL=OFF \
+            -DZoltan_ENABLE_ParMETIS:BOOL=ON
           make
           make install
 
