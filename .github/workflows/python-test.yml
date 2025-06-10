@@ -83,7 +83,7 @@ jobs:
             -DMDS_ID_TYPE=int \
             -DPCU_COMPRESS=ON \
             -DENABLE_ZOLTAN=ON \
-            -DZOLTAN_ROOT=${{ github.workspace }}/libs/install \
+            -DZOLTAN_PREFIX=${{ github.workspace }}/libs/install \
             -DPUMI_PYTHON_INTERFACE=ON \
             -DBUILD_SHARED_LIBS=ON \
             -DBUILD_EXES=OFF \
