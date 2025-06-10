@@ -53,7 +53,7 @@ jobs:
           mkdir build-zoltan
           cd build-zoltan
           cmake ../Trilinos \
-            -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/libs/install \
+            -DCMAKE_INSTALL_PREFIX=${{ github.workspace }}/libs/install \
             -DTPL_ENABLE_MPI:BOOL=ON \
             -DTrilinos_ENABLE_ALL_PACKAGES:BOOL=OFF \
             -DTrilinos_ENABLE_Zoltan:BOOL=ON \
@@ -63,17 +63,17 @@ jobs:
           make install
 
       - name: Configure main project
-        working-directory: ${{github.workspace}}/core
         run: |
-          cmake -S . -B build-py \
-            -DCMAKE_INSTALL_PREFIX="$PWD/build-py/install" \
+          cmake -S . \
+            -DBUILD \
+            -DCMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/install \
             -DCMAKE_C_COMPILER=mpicc \
             -DCMAKE_CXX_COMPILER=mpicxx \
             -DSCOREC_CXX_OPTIMIZE=ON \
             -DMDS_ID_TYPE=int \
             -DPCU_COMPRESS=ON \
             -DENABLE_ZOLTAN=ON \
-            -DZOLTAN_ROOT=${GITHUB_WORKSPACE}/libs/install \
+            -DZOLTAN_ROOT=${{ github.workspace }}/libs/install \
             -DPUMI_PYTHON_INTERFACE=ON \
             -DBUILD_SHARED_LIBS=ON \
             -DBUILD_EXES=OFF \
@@ -83,7 +83,7 @@ jobs:
 
       - name: Build and install
         run: |
-          cmake --build build-py -j 4 --target install
+          cmake --build build -j 4 --target install
 
       - name: Run Python test
         working-directory: ${{github.workspace}}/core/python_wrappers
