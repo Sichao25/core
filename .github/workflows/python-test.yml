@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PYTHONPATH: ${{ github.workspace }}/build-py/python_wrappers
+      PYTHONPATH: ${{ github.workspace }}/build/python_wrappers
       LD_LIBRARY_PATH: ${{ github.workspace }}/libs/install/lib:${LD_LIBRARY_PATH}
 
     steps:
