@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PYTHONPATH: ${{ github.workspace }}/core/build-py/python_wrappers
+      PYTHONPATH: ${{ github.workspace }}/build-py/python_wrappers
       LD_LIBRARY_PATH: ${{ github.workspace }}/libs/install/lib:${LD_LIBRARY_PATH}
 
     steps:
@@ -56,7 +56,6 @@ jobs:
 
       - name: Build Zoltan from Trilinos (minimal)
         run: |
-          ls ${{ github.workspace }}/libs/install
           git clone https://github.com/trilinos/Trilinos.git
           mkdir build-zoltan
           cd build-zoltan
@@ -96,6 +95,7 @@ jobs:
 
       - name: Build and install
         run: |
+          ls ${{ github.workspace }}
           cmake --build build -j 4 --target install
 
       - name: Run Python test
