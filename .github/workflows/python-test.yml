@@ -99,6 +99,6 @@ jobs:
           cmake --build build -j 4 --target install
 
       - name: Run Python test
-        working-directory: ${{github.workspace}}/core/python_wrappers
+        working-directory: ${{github.workspace}}/python_wrappers
         run: |
           python3 test_pyCore.py -g input/cube.dmg -m input/cube.smb
