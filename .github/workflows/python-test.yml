@@ -52,7 +52,7 @@ jobs:
           git clone https://github.com/trilinos/Trilinos.git
           mkdir build-zoltan
           cd build-zoltan
-          cmake ../trilinos \
+          cmake ../Trilinos \
             -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/libs/install \
             -DTPL_ENABLE_MPI:BOOL=ON \
             -DTrilinos_ENABLE_ALL_PACKAGES:BOOL=OFF \
